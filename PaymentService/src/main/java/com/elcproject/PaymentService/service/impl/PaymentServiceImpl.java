@@ -23,7 +23,6 @@ public class PaymentServiceImpl implements IPaymentService {
         this.paymentRepository = paymentRepository;
     }
 
-    //bu service yetki verilmeyecek order islemi bitmeden endpointe gidilirse basarili payment doner
     @Override
     public void doPayment(PaymentDto paymentDto) {
 
