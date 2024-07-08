@@ -17,11 +17,9 @@ public class CloudGatewayApplication {
 		SpringApplication.run(CloudGatewayApplication.class, args);
 	}
 
-	//Added for redis ratelimiter implementation
 	@Bean
 	KeyResolver userKeyResolver() {
 		return exchange -> Mono.just("userKey");
-		//return exchange -> Mono.just(exchange.getRequest().getQueryParams().getFirst("userKey"));
 	}
 
 	@Bean
